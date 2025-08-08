@@ -69,8 +69,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Our Location</h3>
                     <p className="text-muted-foreground">
-                      Motherly Care Children's Home<br />
-                      Ruai, Nairobi<br />
+                      Off Kangundo Road, Ruai<br />
+                      1 km from Ruai Junction<br />
+                      Near Quick Mart and Baraka shop<br />
+                      P.O. Box 3271–00506 Nairobi<br />
                       Kenya
                     </p>
                   </div>
@@ -81,10 +83,11 @@ const Contact = () => {
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Phone</h3>
+                    <h3 className="font-semibold text-foreground mb-1">Phone Numbers</h3>
                     <p className="text-muted-foreground">
-                      +254 XXX XXX XXX<br />
-                      +254 XXX XXX XXX (Alternative)
+                      +254 704 460 726 (Primary)<br />
+                      +254 720 877 507<br />
+                      0724 118 631
                     </p>
                   </div>
                 </div>
@@ -96,8 +99,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email</h3>
                     <p className="text-muted-foreground">
-                      info@motherlycare.org<br />
-                      director@motherlycare.org
+                      motherlycare2018@gmail.com
                     </p>
                   </div>
                 </div>
@@ -121,14 +123,35 @@ const Contact = () => {
               <div className="border-t border-border pt-6">
                 <h3 className="font-semibold text-foreground mb-4">Quick Contact</h3>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Button className="gradient-primary flex-1">
+                  <Button 
+                    onClick={() => window.location.href = "tel:+254704460726"}
+                    className="gradient-primary flex-1"
+                  >
                     <Phone className="h-4 w-4 mr-2" />
-                    Call Us Now
+                    +254 704 460 726
                   </Button>
-                  <Button variant="outline" className="flex-1">
+                  <Button 
+                    onClick={() => window.location.href = "mailto:motherlycare2018@gmail.com"}
+                    variant="outline" 
+                    className="flex-1"
+                  >
                     <Mail className="h-4 w-4 mr-2" />
-                    Send Email
+                    Email Us
                   </Button>
+                </div>
+              </div>
+
+              {/* Additional Information */}
+              <div className="border-t border-border pt-6 mt-6">
+                <h3 className="font-semibold text-foreground mb-4">About Our Founder</h3>
+                <div className="bg-primary/10 rounded-lg p-4">
+                  <p className="text-sm text-muted-foreground mb-2">
+                    <strong>Mary Metobo ("Mama Mary")</strong> founded Motherly Care in 1998 after a life-changing train accident. 
+                    Starting with just 10 children, her vision has grown to support over 150 vulnerable children.
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    We specialize in caring for orphans, HIV-positive, vulnerable and neglected children aged 1-17 years.
+                  </p>
                 </div>
               </div>
             </div>
@@ -237,11 +260,12 @@ const Contact = () => {
       {/* Map Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
+            <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-foreground mb-4">Find Us</h2>
             <p className="text-lg text-muted-foreground">
-              Located in Ruai, Nairobi, Kenya - We welcome visitors by appointment
+              Off Kangundo Road, Ruai - 1 km from Ruai Junction, near Quick Mart and Baraka shop
             </p>
+            <p className="text-muted-foreground">We welcome visitors by appointment</p>
           </div>
           
           {/* Map Placeholder */}

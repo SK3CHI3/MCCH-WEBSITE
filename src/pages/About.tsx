@@ -50,7 +50,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Welcome Message */}
+      {/* Our Story & History */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -62,23 +62,63 @@ const About = () => {
               />
             </div>
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-foreground">Welcome Message</h2>
+              <h2 className="text-3xl font-bold text-foreground">Our Story & History</h2>
               <div className="space-y-4">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  "Dear friends, partners, and supporters, it is with immense joy and gratitude 
-                  that we present to you the story of Motherly Care Children's Home. This 
-                  organization is a reflection of the love, dedication, and dreams of our 
-                  children, staff, and community."
+                  Founded by Mary Metobo ("Mama Mary") in 1998, Motherly Care began with just 10 children 
+                  after Mama Mary's own near-fatal train accident that changed her life's direction. 
+                  What started as a small act of compassion has grown into a thriving children's home and school.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  "Motherly Care isn't just a school — it's a home, a place of healing, 
-                  growth, and transformation. Thank you for walking this journey with us."
+                  Today, we run both a children's home and an in-house primary school, supporting children 
+                  before they move on to secondary education. We care for around 150 children, focusing on 
+                  orphans, HIV-positive, vulnerable and neglected kids aged 1-17 years.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Our founder's life-changing experience taught her that every child deserves love, care, 
+                  and hope for tomorrow. This vision continues to guide us 26 years later.
                 </p>
                 <div className="border-l-4 border-primary pl-4">
-                  <p className="font-semibold text-foreground">– Mr. Moffatt Oseko</p>
-                  <p className="text-sm text-muted-foreground">Manager, Motherly Care Children's Home</p>
+                  <p className="font-semibold text-foreground">"After my accident, I realized God saved me for a purpose - to care for His children."</p>
+                  <p className="text-sm text-muted-foreground">– Mama Mary, Founder (1998)</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Goals & What We Do */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-4">What We Do</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Our comprehensive approach ensures every child receives the care, education, and support they need to thrive.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-background rounded-xl p-6 shadow-soft">
+              <BookOpen className="h-8 w-8 text-primary mb-4" />
+              <h3 className="text-xl font-semibold text-foreground mb-2">Education</h3>
+              <p className="text-muted-foreground">
+                Running our in-house primary school and supporting children through to secondary education
+              </p>
+            </div>
+            <div className="bg-background rounded-xl p-6 shadow-soft">
+              <Heart className="h-8 w-8 text-primary mb-4" />
+              <h3 className="text-xl font-semibold text-foreground mb-2">Healthcare</h3>
+              <p className="text-muted-foreground">
+                Providing medical care and support, especially for HIV-positive children
+              </p>
+            </div>
+            <div className="bg-background rounded-xl p-6 shadow-soft">
+              <Users className="h-8 w-8 text-primary mb-4" />
+              <h3 className="text-xl font-semibold text-foreground mb-2">Family Care</h3>
+              <p className="text-muted-foreground">
+                Creating a loving home environment where vulnerable children can grow and flourish
+              </p>
             </div>
           </div>
         </div>
@@ -151,15 +191,20 @@ const About = () => {
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-foreground">Our Location</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Motherly Care Children's Home is located in Ruai, Nairobi, Kenya, serving 
-                orphans and vulnerable children through education, shelter, and support programs.
+                Motherly Care Children's Home is located off Kangundo Road in Ruai, just 1 km from 
+                Ruai Junction, near Quick Mart and Baraka shop. Our strategic location allows us to 
+                serve the surrounding communities while providing a peaceful environment for learning and growth.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Our strategic location allows us to serve the surrounding communities while 
-                providing a peaceful environment for learning and growth. The facility includes 
-                dormitories, classrooms, dining areas, recreational spaces, and vocational 
-                training workshops.
+                The facility includes dormitories, classrooms, dining areas, recreational spaces, and 
+                our in-house primary school where we educate children before they transition to secondary education.
               </p>
+              <div className="bg-primary/10 rounded-lg p-4">
+                <p className="text-foreground font-medium">Visit Us:</p>
+                <p className="text-muted-foreground">Off Kangundo Road, Ruai</p>
+                <p className="text-muted-foreground">1 km from Ruai Junction</p>
+                <p className="text-muted-foreground">Near Quick Mart and Baraka shop</p>
+              </div>
             </div>
             <div>
               <img

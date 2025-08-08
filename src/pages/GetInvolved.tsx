@@ -67,12 +67,12 @@ const GetInvolved = () => {
         commitment: "Any amount makes a difference",
         duration: "One-time or recurring",
         includes: [
-          "$25 - Provides school supplies for one child",
-          "$50 - Feeds a child for one month",
-          "$100 - Covers medical care for multiple children",
-          "$250 - Sponsors a vocational training course",
-          "$500 - Supports facility maintenance",
-          "Custom amounts for specific needs"
+          "$25 - Provides a week of nutritious meals",
+          "$50 - Covers stationery and learning materials for one month",
+          "$100 - Supports medical care and health check-ups",
+          "$185 - Covers full annual school fees for one child",
+          "$300 - Provides uniforms and clothing for multiple children",
+          "Custom amounts for specific facility needs"
         ],
         process: [
           "Choose donation amount and frequency",
@@ -134,27 +134,27 @@ const GetInvolved = () => {
       }
     },
     {
-      id: "advocate",
+      id: "visit",
       icon: Calendar,
-      title: "Advocate",
-      description: "Spread awareness about our mission in your networks",
+      title: "Visit Us",
+      description: "Come celebrate with us! Birthdays, holidays, or any special occasion - we welcome visitors who want to share joy with our children",
       details: {
         commitment: "Ongoing awareness efforts",
         duration: "As much as you can spare",
         includes: [
-          "Social media sharing",
-          "Community presentations",
-          "Newsletter distribution",
-          "Friend and family outreach",
-          "Church and organization talks",
-          "Blog writing and testimonials"
+          "Birthday celebrations with children",
+          "Holiday parties and gift giving",
+          "Community events and gatherings",
+          "Educational tours of our facility",
+          "Interaction with children and staff",
+          "Sharing meals and activities"
         ],
         process: [
-          "Request advocacy materials",
-          "Share our story with others",
-          "Connect interested parties with us",
-          "Provide feedback on outreach",
-          "Continue spreading awareness"
+          "Call us to schedule your visit",
+          "Plan your celebration or event",
+          "Coordinate with our staff",
+          "Enjoy time with our children",
+          "Share the joy and make memories"
         ]
       }
     }
@@ -262,8 +262,17 @@ const GetInvolved = () => {
                     </div>
 
                     <div className="mt-6">
-                      <Button className="w-full gradient-primary shadow-medium hover:shadow-strong transition-smooth">
-                        Get Started with {activeWay.title}
+                      <Button 
+                        onClick={() => {
+                          if (activeWay.title === "Make a Donation") {
+                            document.getElementById('donation-section')?.scrollIntoView({ behavior: 'smooth' });
+                          } else {
+                            window.location.href = "tel:+254704460726";
+                          }
+                        }}
+                        className="w-full gradient-primary shadow-medium hover:shadow-strong transition-smooth"
+                      >
+                        {activeWay.title === "Make a Donation" ? "View Payment Options" : "Call +254 704 460 726"}
                       </Button>
                     </div>
                   </div>
@@ -320,21 +329,106 @@ const GetInvolved = () => {
         </div>
       </section>
 
+      {/* Payment Methods Section */}
+      <section id="donation-section" className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-4">How to Donate</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Choose your preferred payment method to support our children's education and care.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* M-Pesa Payment */}
+            <div className="bg-background rounded-2xl p-6 shadow-medium border border-border">
+              <h3 className="text-xl font-bold text-foreground mb-4">M-Pesa Payment</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center py-2 border-b border-border">
+                  <span className="font-medium text-foreground">Paybill Number:</span>
+                  <span className="text-primary font-mono text-lg cursor-pointer" onClick={() => navigator.clipboard.writeText('177338')}>
+                    177338
+                  </span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-border">
+                  <span className="font-medium text-foreground">Account Number:</span>
+                  <span className="text-primary font-mono text-lg cursor-pointer" onClick={() => navigator.clipboard.writeText('MCCH')}>
+                    MCCH
+                  </span>
+                </div>
+                <p className="text-sm text-muted-foreground mt-4">
+                  Click on the numbers above to copy them to your clipboard.
+                </p>
+              </div>
+            </div>
+
+            {/* Bank Transfer */}
+            <div className="bg-background rounded-2xl p-6 shadow-medium border border-border">
+              <h3 className="text-xl font-bold text-foreground mb-4">Bank Transfer</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center py-2 border-b border-border">
+                  <span className="font-medium text-foreground">Account Name:</span>
+                  <span className="text-primary font-mono text-sm cursor-pointer" onClick={() => navigator.clipboard.writeText('motherlycarechildenshome')}>
+                    motherlycarechildenshome
+                  </span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-border">
+                  <span className="font-medium text-foreground">Account Number:</span>
+                  <span className="text-primary font-mono text-lg cursor-pointer" onClick={() => navigator.clipboard.writeText('5800555002')}>
+                    5800555002
+                  </span>
+                </div>
+                <p className="text-sm text-muted-foreground mt-4">
+                  Click on the numbers above to copy them to your clipboard.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* What Your Donation Provides */}
+          <div className="mt-12 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-foreground mb-6 text-center">What Your Donation Provides</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-background rounded-lg p-4 border border-border">
+                <span className="font-semibold text-primary">$25</span> - Provides a week of nutritious meals for one child
+              </div>
+              <div className="bg-background rounded-lg p-4 border border-border">
+                <span className="font-semibold text-primary">$50</span> - Covers stationery and learning materials for one month
+              </div>
+              <div className="bg-background rounded-lg p-4 border border-border">
+                <span className="font-semibold text-primary">$100</span> - Supports medical care and health check-ups
+              </div>
+              <div className="bg-background rounded-lg p-4 border border-border">
+                <span className="font-semibold text-primary">$185</span> - Covers full annual school fees for one child
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact for More Info */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Have Questions?</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">Ready to Get Involved?</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              We're here to help you find the perfect way to make a difference. 
-              Contact us to discuss how you can get involved.
+              Call us today to discuss how you can make a difference in a child's life. 
+              Every contribution, big or small, creates lasting impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="gradient-primary shadow-medium hover:shadow-strong transition-smooth">
-                Contact Us Today
+              <Button 
+                size="lg" 
+                onClick={() => window.location.href = "tel:+254704460726"}
+                className="gradient-primary shadow-medium hover:shadow-strong transition-smooth"
+              >
+                Call +254 704 460 726
               </Button>
-              <Button variant="outline" size="lg">
-                Download Involvement Guide
+              <Button 
+                variant="outline" 
+                size="lg"
+                onClick={() => window.location.href = "mailto:motherlycare2018@gmail.com"}
+              >
+                Email Us
               </Button>
             </div>
           </div>

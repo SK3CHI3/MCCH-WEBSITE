@@ -75,13 +75,8 @@ const childrenData = [
 ];
 
 const Children = () => {
-  const [filter, setFilter] = useState<"all" | "available" | "sponsored">("all");
-  
-  const filteredChildren = childrenData.filter(child => {
-    if (filter === "available") return !child.sponsored;
-    if (filter === "sponsored") return child.sponsored;
-    return true;
-  });
+  // Remove filtering since we're removing the sponsored concept
+  const filteredChildren = childrenData.filter(child => !child.sponsored); // Only show available children
 
   const handleSponsorClick = (childName: string) => {
     // In a real app, this would open a sponsorship form or redirect to a payment page
@@ -105,31 +100,22 @@ const Children = () => {
         </div>
       </section>
 
-      {/* Filter Buttons */}
+      {/* Educational Needs Info */}
       <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button
-              variant={filter === "all" ? "default" : "outline"}
-              onClick={() => setFilter("all")}
-              className="transition-smooth"
-            >
-              All Children ({childrenData.length})
-            </Button>
-            <Button
-              variant={filter === "available" ? "default" : "outline"}
-              onClick={() => setFilter("available")}
-              className="transition-smooth"
-            >
-              Available for Sponsorship ({childrenData.filter(c => !c.sponsored).length})
-            </Button>
-            <Button
-              variant={filter === "sponsored" ? "default" : "outline"}
-              onClick={() => setFilter("sponsored")}
-              className="transition-smooth"
-            >
-              Currently Sponsored ({childrenData.filter(c => c.sponsored).length})
-            </Button>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl font-bold text-foreground mb-4">Educational Support Needed</h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              Our children need educational support including school fees, stationery, uniforms, and learning materials.
+            </p>
+            <div className="bg-primary/10 rounded-lg p-6">
+              <p className="text-lg font-semibold text-foreground mb-2">
+                Annual School Fees: $185 USD (KSH 24,000)
+              </p>
+              <p className="text-muted-foreground">
+                This covers tuition, books, stationery, uniforms, and educational materials for one child for the entire year.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -192,33 +178,23 @@ const Children = () => {
                     </div>
                   </div>
 
-                  {/* Sponsorship Info */}
-                  {!child.sponsored && (
-                    <div className="border-t border-border pt-4">
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="text-sm text-muted-foreground">Monthly sponsorship:</span>
-                        <span className="text-lg font-bold text-primary">${child.monthlyNeed}</span>
-                      </div>
-                      <Button
-                        onClick={() => handleSponsorClick(child.name)}
-                        className="w-full gradient-primary shadow-medium hover:shadow-strong transition-smooth"
-                      >
-                        <Heart className="h-4 w-4 mr-2" />
-                        Sponsor {child.name}
-                      </Button>
+                  {/* Educational Support Info */}
+                  <div className="border-t border-border pt-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-sm text-muted-foreground">Annual school fees:</span>
+                      <span className="text-lg font-bold text-primary">$185 USD</span>
                     </div>
-                  )}
-
-                  {child.sponsored && (
-                    <div className="border-t border-border pt-4">
-                      <div className="text-center">
-                        <p className="text-success font-medium mb-2">This child is sponsored!</p>
-                        <p className="text-sm text-muted-foreground">
-                          Thank you to our generous sponsor for supporting {child.name}'s education and care.
-                        </p>
-                      </div>
+                    <div className="text-xs text-muted-foreground mb-3">
+                      Includes: Tuition, books, stationery, uniforms, learning materials
                     </div>
-                  )}
+                    <Button
+                      onClick={() => handleSponsorClick(child.name)}
+                      className="w-full gradient-primary shadow-medium hover:shadow-strong transition-smooth"
+                    >
+                      <Heart className="h-4 w-4 mr-2" />
+                      Support {child.name}'s Education
+                    </Button>
+                  </div>
                 </div>
               </div>
             ))}

@@ -28,19 +28,18 @@ const Index = () => {
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-foreground">About Motherly Care</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Motherly Care Children's Home & School Centre has been a beacon of hope for 
-                vulnerable children in Ruai, Nairobi, Kenya for over 12 years. We provide 
-                a safe, nurturing environment where children receive education, spiritual 
+                Founded by Mary Metobo ("Mama Mary") in 1998, Motherly Care began with just 10 children 
+                after Mama Mary's own near-fatal train accident that changed her life's direction. 
+                We provide a safe, nurturing environment where children receive education, spiritual 
                 guidance, and life skills to become self-reliant and empowered individuals.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Our holistic approach ensures every child receives not just education, 
-                but also the love, care, and support they need to thrive and build 
-                successful futures.
+                Today we care for around 150 children, focusing on orphans, HIV-positive, vulnerable 
+                and neglected kids aged 1-17 years through our children's home and in-house primary school.
               </p>
               <Link to="/about">
                 <Button className="gradient-primary shadow-medium hover:shadow-strong transition-smooth group">
-                  Learn More About Us
+                  Learn More About Our Story
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
@@ -141,28 +140,62 @@ const Index = () => {
       </section>
 
       {/* Impact Stats */}
-      <section className="py-16 gradient-hero text-primary-foreground">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
-            <p className="text-xl opacity-90 max-w-2xl mx-auto">
-              Over 12 years of transforming lives and building futures
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">150+</div>
+              <p className="text-muted-foreground">Children in Our Care</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">26</div>
+              <p className="text-muted-foreground">Years Since 1998</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">1-17</div>
+              <p className="text-muted-foreground">Age Range We Serve</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">100%</div>
+              <p className="text-muted-foreground">Love & Commitment</p>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { number: "150+", label: "Children Served", description: "Currently in our care" },
-              { number: "500+", label: "Lives Transformed", description: "Since our founding" },
-              { number: "95%", label: "Success Rate", description: "Transition to secondary school" },
-              { number: "50+", label: "Graduates", description: "Now successful adults" }
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-bold mb-2">{stat.number}</div>
-                <div className="text-lg font-semibold mb-1">{stat.label}</div>
-                <div className="text-sm opacity-80">{stat.description}</div>
+        </div>
+      </section>
+
+      {/* Our Story Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img
+                src={childrenGroup}
+                alt="Children at Motherly Care"
+                className="rounded-2xl shadow-strong w-full h-auto"
+              />
+            </div>
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-foreground">Our Story Since 1998</h2>
+              <div className="space-y-4">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Founded by Mary Metobo ("Mama Mary") in 1998, Motherly Care began with just 10 children 
+                  after Mama Mary's own near-fatal train accident that changed her life's direction.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  What started as a small act of compassion has grown into a thriving children's home and school. 
+                  Today, we run both a children's home and an in-house primary school, supporting children 
+                  before they move on to secondary education.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  We care for around 150 children, focusing on orphans, HIV-positive, vulnerable and 
+                  neglected kids aged 1-17 years.
+                </p>
+                <div className="border-l-4 border-primary pl-4">
+                  <p className="font-semibold text-foreground">"Every child deserves love, care, and hope for tomorrow."</p>
+                  <p className="text-sm text-muted-foreground">– Mama Mary, Founder</p>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
