@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { ArrowRight, Heart, Users, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 
-
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -45,14 +44,19 @@ const HeroSection = () => {
         }, [heroImages.length]);
         return (
           <div className="absolute inset-0 z-0">
-            <a href="https://postimages.org/" target="_blank" rel="noopener noreferrer">
-              <img
-                src={heroImages[current].src}
-                alt={heroImages[current].alt}
-                className="w-full h-full object-cover transition-all duration-700"
-              />
-            </a>
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-primary/20 to-primary/10" />
+            <div className="relative w-full h-full overflow-hidden">
+              {heroImages.map((image, index) => (
+                <img
+                  key={index}
+                  src={image.src}
+                  alt={image.alt}
+                  className={`absolute inset-0 w-full h-full object-cover animate-subtle-zoom transition-opacity duration-1000 ease-in-out ${
+                    index === current ? 'opacity-100' : 'opacity-0'
+                  }`}
+                />
+              ))}
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-primary/30 to-primary/10" />
             <button
               onClick={prev}
               className="absolute left-4 top-1/2 -translate-y-1/2 bg-primary/60 text-white rounded-full p-2 shadow hover:bg-primary/80 transition hidden md:block"
@@ -71,15 +75,15 @@ const HeroSection = () => {
               {heroImages.map((_, idx) => (
                 <span
                   key={idx}
-                  className={`block w-3 h-3 rounded-full ${idx === current ? 'bg-primary' : 'bg-primary/30'}`}
+                  className={`block w-3 h-3 rounded-full transition-all duration-300 ${
+                    idx === current ? 'bg-primary scale-125' : 'bg-primary/30 scale-100'
+                  }`}
                 />
               ))}
             </div>
           </div>
         );
       })()}
-
-
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
