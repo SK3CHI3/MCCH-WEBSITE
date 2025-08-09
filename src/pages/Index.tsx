@@ -20,7 +20,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src={childrenGroup}
+                src="/gallery/481297623_1023022436519283_5725391079472523024_n.jpg"
                 alt="Children at Motherly Care"
                 className="rounded-2xl shadow-strong w-full h-auto"
               />
@@ -92,7 +92,7 @@ const Index = () => {
                 icon: BookOpen,
                 title: "Education",
                 description: "Quality primary education following the Kenyan curriculum with qualified teachers and modern facilities.",
-                image: education
+                image: "/gallery/72673018_785831101830486_8444662335439634432_n.jpg"
               },
               {
                 icon: Heart,
@@ -104,7 +104,7 @@ const Index = () => {
                 icon: Users,
                 title: "Life Skills",
                 description: "Essential life skills training to prepare children for independent living and future success.",
-                image: facilities
+                image: "/gallery/pp.jpg"
               }
             ].map((program, index) => (
               <div key={index} className="bg-background rounded-xl shadow-soft hover:shadow-medium transition-smooth border border-border overflow-hidden">

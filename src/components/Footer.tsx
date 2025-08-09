@@ -1,8 +1,26 @@
+
+import React, { useEffect, useState } from "react";
 import { Heart, Mail, Phone, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 
 const Footer = () => {
+  const [visitCount, setVisitCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    fetch('https://api.counterapi.dev/v1/motherlycarechildrenshome.org/visits/up')
+      .then(res => res.ok ? res.json() : Promise.reject(res))
+      .then(data => {
+        // v1 returns { namespace, name, value }
+        if (data && typeof data.value === 'number') {
+          setVisitCount(data.value);
+        } else {
+          setVisitCount(0);
+        }
+      })
+      .catch(() => setVisitCount(0));
+  }, []);
+
   return (
     <footer className="bg-primary text-primary-foreground">
       {/* Main Footer */}
@@ -112,6 +130,14 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm opacity-80">
               <p>&copy; 2025 Motherly Care Children's Home. All rights reserved.</p>
+              <p className="mt-1">
+                <span className="font-semibold">Site Visits:</span>
+                {typeof visitCount === 'number' ? (
+                  <span className="ml-1">{visitCount.toLocaleString()}</span>
+                ) : (
+                  <span className="ml-1">Loading...</span>
+                )}
+              </p>
             </div>
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm opacity-80">
               <div className="flex space-x-6">

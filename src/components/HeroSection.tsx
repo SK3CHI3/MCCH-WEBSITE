@@ -1,19 +1,83 @@
-import { ArrowRight, Heart, Users, BookOpen } from "lucide-react";
+
+import React, { useState } from "react";
+import { ArrowRight, Heart, Users, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4np1DKtFMuT990VFT3yPb8PJoImd-Bhj2_z-Am8QntMeDzV-AghlZ7Kf1H2QsNnH3OqEXcL1P9SIcyLspssYNWJy0GPO7ypXthT6SDO6R9v3QyGtRuANOOyxjP6YLjnVAo2ym2M=w1200-h800-k-no"
-          alt="Motherly Care Children's Home (MCCH) from Google Maps"
-          className="w-full h-full object-cover"
-        />
-  <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-primary/20 to-primary/10" />
-      </div>
+
+      {/* Hero Image Carousel */}
+      {(() => {
+        const heroImages = [
+          {
+            src: "/gallery/hero-1-min.jpg",
+            alt: "hero-1"
+          },
+          {
+            src: "/gallery/hero-2-min.jpg",
+            alt: "hero-2"
+          },
+          {
+            src: "/gallery/hero-3-min.jpg",
+            alt: "hero-3"
+          },
+          {
+            src: "/gallery/hero-4-min.jpg",
+            alt: "hero-4"
+          },
+          {
+            src: "/gallery/hero-5-min.jpg",
+            alt: "hero-5"
+          }
+        ];
+        const [current, setCurrent] = useState(0);
+        const prev = () => setCurrent((c) => (c === 0 ? heroImages.length - 1 : c - 1));
+        const next = () => setCurrent((c) => (c === heroImages.length - 1 ? 0 : c + 1));
+
+        // Auto-slide every 4 seconds
+        React.useEffect(() => {
+          const interval = setInterval(() => {
+            setCurrent((c) => (c === heroImages.length - 1 ? 0 : c + 1));
+          }, 4000);
+          return () => clearInterval(interval);
+        }, [heroImages.length]);
+        return (
+          <div className="absolute inset-0 z-0">
+            <a href="https://postimages.org/" target="_blank" rel="noopener noreferrer">
+              <img
+                src={heroImages[current].src}
+                alt={heroImages[current].alt}
+                className="w-full h-full object-cover transition-all duration-700"
+              />
+            </a>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-primary/20 to-primary/10" />
+            <button
+              onClick={prev}
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-primary/60 text-white rounded-full p-2 shadow hover:bg-primary/80 transition hidden md:block"
+              aria-label="Previous image"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+            <button
+              onClick={next}
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-primary/60 text-white rounded-full p-2 shadow hover:bg-primary/80 transition hidden md:block"
+              aria-label="Next image"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </button>
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+              {heroImages.map((_, idx) => (
+                <span
+                  key={idx}
+                  className={`block w-3 h-3 rounded-full ${idx === current ? 'bg-primary' : 'bg-primary/30'}`}
+                />
+              ))}
+            </div>
+          </div>
+        );
+      })()}
 
 
 

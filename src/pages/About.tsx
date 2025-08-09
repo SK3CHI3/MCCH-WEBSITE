@@ -56,7 +56,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src={childrenGroup}
+                src="/gallery/469318253_549155091423432_3624827173028074347_n.jpg"
                 alt="Children at Motherly Care"
                 className="rounded-2xl shadow-strong w-full h-auto"
               />

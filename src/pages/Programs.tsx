@@ -18,7 +18,7 @@ const Programs = () => {
         "Library and reading programs",
         "Regular assessments and progress tracking"
       ],
-      image: education
+  image: "/gallery/72673018_785831101830486_8444662335439634432_n.jpg"
     },
     {
       icon: Heart,
@@ -83,7 +83,7 @@ const Programs = () => {
         "Counseling and emotional support",
         "Family-style living environment"
       ],
-      image: facilities
+  image: "/gallery/pp.jpg"
     }
   ];
 

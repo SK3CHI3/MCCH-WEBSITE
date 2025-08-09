@@ -7,71 +7,22 @@ import childrenGroup from "@/assets/children-group.jpg";
 import education from "@/assets/education.jpg";
 import facilities from "@/assets/facilities.jpg";
 
-// Mock gallery data
+// Gallery images from local /gallery folder
 const galleryImages = [
-  {
-    id: 1,
-    src: childrenGroup,
-    title: "Our Beautiful Children",
-    category: "children",
-    description: "Happy children at Motherly Care during their outdoor activities"
-  },
-  {
-    id: 2,
-    src: education,
-    title: "Learning Together",
-    category: "education",
-    description: "Students engaged in classroom learning activities"
-  },
-  {
-    id: 3,
-    src: facilities,
-    title: "Our Facilities",
-    category: "facilities",
-    description: "Modern and clean facilities for our children"
-  },
-  {
-    id: 4,
-    src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&h=600&fit=crop",
-    title: "Sports Day Fun",
-    category: "activities",
-    description: "Annual sports day celebration with all children participating"
-  },
-  {
-    id: 5,
-    src: "https://images.unsplash.com/photo-1544717301-9cdcb1f5940f?w=800&h=600&fit=crop",
-    title: "Reading Corner",
-    category: "education",
-    description: "Children enjoying quiet reading time in our library"
-  },
-  {
-    id: 6,
-    src: "https://images.unsplash.com/photo-1576872381149-7847515ce5d8?w=800&h=600&fit=crop",
-    title: "Meal Time",
-    category: "daily-life",
-    description: "Nutritious meals shared together as a family"
-  },
-  {
-    id: 7,
-    src: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&h=600&fit=crop",
-    title: "Art Class",
-    category: "activities",
-    description: "Creative expression through art and crafts"
-  },
-  {
-    id: 8,
-    src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop",
-    title: "Music Lessons",
-    category: "activities",
-    description: "Learning musical instruments and singing together"
-  },
-  {
-    id: 9,
-    src: "https://images.unsplash.com/photo-1509909756405-be0199881695?w=800&h=600&fit=crop",
-    title: "Graduation Day",
-    category: "achievements",
-    description: "Celebrating our graduates moving to secondary school"
-  }
+  { id: 1, src: "/gallery/hero-1-min.jpg", title: "Group Photo", category: "facility", description: "A group photo at Motherly Care." },
+  { id: 2, src: "/gallery/hero-2-min.jpg", title: "Smiles", category: "children", description: "Children smiling at Motherly Care." },
+  { id: 3, src: "/gallery/hero-3-min.jpg", title: "Activities", category: "activities", description: "Fun activities at Motherly Care." },
+  { id: 4, src: "/gallery/hero-4-min.jpg", title: "Learning", category: "education", description: "Learning moments at Motherly Care." },
+  { id: 5, src: "/gallery/hero-5-min.jpg", title: "Playtime", category: "play", description: "Playtime at Motherly Care." },
+  { id: 6, src: "/gallery/469318253_549155091423432_3624827173028074347_n.jpg", title: "Outdoor Fun", category: "activities", description: "Outdoor fun at Motherly Care." },
+  { id: 7, src: "/gallery/481297623_1023022436519283_5725391079472523024_n.jpg", title: "Celebration", category: "achievements", description: "Celebrating achievements together." },
+  { id: 8, src: "/gallery/72673018_785831101830486_8444662335439634432_n.jpg", title: "School Life", category: "education", description: "A glimpse of school life." },
+  { id: 9, src: "/gallery/IMG-20250618-WA00119_cleanup.png", title: "Art & Creativity", category: "activities", description: "Art and creative time." },
+  { id: 10, src: "/gallery/kk0.jpg", title: "Friends", category: "children", description: "Friendship at Motherly Care." },
+  { id: 11, src: "/gallery/lklko.jpg", title: "Daily Life", category: "daily-life", description: "Everyday moments at Motherly Care." },
+  { id: 12, src: "/gallery/pp.jpg", title: "Playground", category: "play", description: "Playground fun." },
+  { id: 13, src: "/gallery/WhatsApp Image 2025-06-18 at 02.57.57_2e24ed7c.jpg", title: "Special Event", category: "achievements", description: "A special event at Motherly Care." },
+  { id: 14, src: "/gallery/WhatsApp Image 2025-06-22 at 22.43.20_eb42681b.jpg", title: "Community", category: "community", description: "Community gathering at Motherly Care." }
 ];
 
 const categories = [
