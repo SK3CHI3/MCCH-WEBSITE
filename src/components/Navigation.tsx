@@ -54,7 +54,11 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="default" className="gradient-primary shadow-medium hover:shadow-strong transition-smooth">
+            <Button 
+              variant="default" 
+              className="gradient-primary shadow-medium hover:shadow-strong transition-smooth"
+              onClick={() => window.location.href = '/get-involved?tab=donate'}
+            >
               Donate Now
             </Button>
           </div>
@@ -89,6 +93,7 @@ const Navigation = () => {
               <Button 
                 variant="default" 
                 className="gradient-primary shadow-medium mt-4 mx-2"
+                onClick={() => window.location.href = '/get-involved?tab=donate'}
               >
                 Donate Now
               </Button>

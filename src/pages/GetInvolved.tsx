@@ -2,10 +2,18 @@ import { Heart, Users, DollarSign, Calendar, Gift, Handshake } from "lucide-reac
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const GetInvolved = () => {
   const [activeTab, setActiveTab] = useState("sponsor");
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tab = urlParams.get('tab');
+    if (tab) {
+      setActiveTab(tab);
+    }
+  }, []);
 
   const ways = [
     {
