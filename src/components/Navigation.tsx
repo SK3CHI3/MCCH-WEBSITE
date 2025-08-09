@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Heart } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -57,7 +58,7 @@ const Navigation = () => {
             <Button 
               variant="default" 
               className="gradient-primary shadow-medium hover:shadow-strong transition-smooth"
-              onClick={() => window.location.href = '/get-involved?tab=donate'}
+              onClick={() => navigate('/get-involved?tab=donate')}
             >
               Donate Now
             </Button>
@@ -93,7 +94,7 @@ const Navigation = () => {
               <Button 
                 variant="default" 
                 className="gradient-primary shadow-medium mt-4 mx-2"
-                onClick={() => window.location.href = '/get-involved?tab=donate'}
+                onClick={() => navigate('/get-involved?tab=donate')}
               >
                 Donate Now
               </Button>

@@ -83,17 +83,23 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 mt-1 opacity-80" />
                 <div className="text-sm opacity-80">
-                  <p>Ruai, Nairobi</p>
-                  <p>Kenya</p>
+                  <p>Off Kangundo Road, Ruai</p>
+                  <p>1 km from Ruai Junction</p>
+                  <p>Near Quick Mart and Baraka shop</p>
+                  <p>P.O. Box 3271–00506 Nairobi</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Phone className="h-4 w-4 mt-1 opacity-80" />
+                <div className="text-sm opacity-80 space-y-1">
+                  <p>+254 704 460 726</p>
+                  <p>+254 720 877 507</p>
+                  <p>0724 118 631</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 opacity-80" />
-                <span className="text-sm opacity-80">+254 XXX XXX XXX</span>
-              </div>
-              <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 opacity-80" />
-                <span className="text-sm opacity-80">info@motherlycare.org</span>
+                <span className="text-sm opacity-80">motherlycare2018@gmail.com</span>
               </div>
             </div>
           </div>
