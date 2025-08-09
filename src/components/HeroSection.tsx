@@ -1,6 +1,6 @@
 import { ArrowRight, Heart, Users, BookOpen } from "lucide-react";
 import { Button } from "./ui/button";
-import heroImage from "@/assets/hero-image.jpg";
+
 
 const HeroSection = () => {
   return (
@@ -8,12 +8,14 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src={heroImage}
-          alt="Motherly Care Children's Home"
+          src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4np1DKtFMuT990VFT3yPb8PJoImd-Bhj2_z-Am8QntMeDzV-AghlZ7Kf1H2QsNnH3OqEXcL1P9SIcyLspssYNWJy0GPO7ypXthT6SDO6R9v3QyGtRuANOOyxjP6YLjnVAo2ym2M=w1200-h800-k-no"
+          alt="Motherly Care Children's Home (MCCH) from Google Maps"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50" />
+  <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-primary/20 to-primary/10" />
       </div>
+
+
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">

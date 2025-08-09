@@ -1,0 +1,11 @@
+{
+  "name": "favicon-gen",
+  "version": "1.0.0",
+  "description": "Simple Node.js favicon generator script for MCCH website.",
+  "main": "generate-favicon.js",
+  "type": "module",
+  "dependencies": {
+    "favicons": "^7.0.2",
+    "fs-extra": "^11.2.0"
+  }
+}
