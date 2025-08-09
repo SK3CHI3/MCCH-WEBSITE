@@ -166,16 +166,10 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm opacity-80">
-              <div className="flex space-x-6">
-                <Link to="/privacy" className="hover:opacity-100 transition-smooth">
-                  Privacy Policy
-                </Link>
-                <Link to="/terms" className="hover:opacity-100 transition-smooth">
-                  Terms of Service
-                </Link>
-              </div>
               <div className="text-center md:text-right">
-                <p>Website built by <a href="https://omollo-victor.netlify.app/" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth underline">Victor Omollo</a></p>
+                <p className="font-medium">
+                  Website built by <a href="https://omollo-victor.netlify.app/" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth underline font-semibold">Victor Omollo</a>
+                </p>
               </div>
             </div>
           </div>

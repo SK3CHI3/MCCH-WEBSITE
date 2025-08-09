@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight, Heart } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -38,10 +38,26 @@ const categories = [
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
 
   const filteredImages = galleryImages.filter(image => 
     selectedCategory === "all" || image.category === selectedCategory
   );
+
+  // Simple preloading for better performance
+  useEffect(() => {
+    const preloadImages = () => {
+      galleryImages.forEach(image => {
+        const img = new Image();
+        img.src = image.src;
+        img.onload = () => {
+          setLoadedImages(prev => new Set(prev).add(image.src));
+        };
+      });
+    };
+
+    preloadImages();
+  }, []);
 
   const openLightbox = (imageId: number) => {
     setSelectedImage(imageId);
@@ -113,12 +129,22 @@ const Gallery = () => {
                 className="group cursor-pointer overflow-hidden rounded-xl shadow-soft hover:shadow-medium transition-smooth"
                 onClick={() => openLightbox(image.id)}
               >
-                <div className="relative aspect-square overflow-hidden">
+                <div className="relative aspect-square overflow-hidden bg-gray-100">
                   <img
                     src={image.src}
                     alt={image.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                    onLoad={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      setLoadedImages(prev => new Set(prev).add(target.src));
+                    }}
                   />
+                  {!loadedImages.has(image.src) && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="animate-pulse bg-gray-200 w-full h-full"></div>
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center p-4">
                       <h3 className="font-semibold mb-1">{image.title}</h3>
