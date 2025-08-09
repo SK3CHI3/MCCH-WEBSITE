@@ -92,14 +92,14 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Phone className="h-4 w-4 mt-1 opacity-80" />
                 <div className="text-sm opacity-80 space-y-1">
-                  <p>+254 704 460 726</p>
-                  <p>+254 720 877 507</p>
-                  <p>0724 118 631</p>
+                  <a href="tel:+254704460726" className="block hover:opacity-100 transition-smooth">+254 704 460 726</a>
+                  <a href="tel:+254720877507" className="block hover:opacity-100 transition-smooth">+254 720 877 507</a>
+                  <a href="tel:+254724118631" className="block hover:opacity-100 transition-smooth">+254 724 118 631</a>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 opacity-80" />
-                <span className="text-sm opacity-80">motherlycare2018@gmail.com</span>
+                <a href="mailto:motherlycare2018@gmail.com" className="text-sm opacity-80 hover:opacity-100 transition-smooth">motherlycare2018@gmail.com</a>
               </div>
             </div>
           </div>
@@ -113,13 +113,18 @@ const Footer = () => {
             <div className="text-sm opacity-80">
               <p>&copy; 2025 Motherly Care Children's Home. All rights reserved.</p>
             </div>
-            <div className="flex space-x-6 text-sm opacity-80">
-              <Link to="/privacy" className="hover:opacity-100 transition-smooth">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="hover:opacity-100 transition-smooth">
-                Terms of Service
-              </Link>
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm opacity-80">
+              <div className="flex space-x-6">
+                <Link to="/privacy" className="hover:opacity-100 transition-smooth">
+                  Privacy Policy
+                </Link>
+                <Link to="/terms" className="hover:opacity-100 transition-smooth">
+                  Terms of Service
+                </Link>
+              </div>
+              <div className="text-center md:text-right">
+                <p>Website built by <a href="https://omollo-victor.netlify.app/" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth underline">Victor Omollo</a></p>
+              </div>
             </div>
           </div>
         </div>
