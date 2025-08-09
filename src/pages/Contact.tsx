@@ -112,8 +112,7 @@ const Contact = () => {
                     <h3 className="font-semibold text-foreground mb-1">Visiting Hours</h3>
                     <p className="text-muted-foreground">
                       Monday - Friday: 9:00 AM - 5:00 PM<br />
-                      Saturday: 10:00 AM - 3:00 PM<br />
-                      Sunday: By appointment only
+                      Saturday & Sunday: 10:00 AM - 3:00 PM
                     </p>
                   </div>
                 </div>
@@ -146,7 +145,7 @@ const Contact = () => {
                 <h3 className="font-semibold text-foreground mb-4">About Our Founder</h3>
                 <div className="bg-primary/10 rounded-lg p-4">
                   <p className="text-sm text-muted-foreground mb-2">
-                    <strong>Mary Metobo ("Mama Mary")</strong> founded Motherly Care in 1998 after a life-changing train accident. 
+                    <strong>The late Mary Metobo ("Mama Mary")</strong> founded Motherly Care in 1998 after a life-changing train accident. 
                     Starting with just 10 children, her vision has grown to support over 150 vulnerable children.
                   </p>
                   <p className="text-sm text-muted-foreground">
@@ -268,16 +267,36 @@ const Contact = () => {
             <p className="text-muted-foreground">We welcome visitors by appointment</p>
           </div>
           
-          {/* Map Placeholder */}
+          {/* Google Maps */}
           <div className="max-w-4xl mx-auto">
-            <div className="bg-muted rounded-2xl h-96 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-foreground mb-2">Interactive Map</h3>
-                <p className="text-muted-foreground">
-                  Map integration would be implemented here<br />
-                  showing the exact location of Motherly Care Children's Home
-                </p>
+            <div className="rounded-2xl overflow-hidden shadow-medium">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8492028067953!2d37.009064190179494!3d-1.2628683742534852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f6b3e21deb78f%3A0x4ddc149254afd631!2sMotherly%20Care%20Children&#39;s%20Home%20(MCCH)!5e0!3m2!1sen!2ske!4v1754692764972!5m2!1sen!2ske" 
+                width="100%" 
+                height="450" 
+                style={{border:0}} 
+                allowFullScreen 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full"
+              />
+            </div>
+            <div className="text-center mt-6">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Button 
+                  onClick={() => window.open("https://maps.google.com/maps/dir/?api=1&destination=Motherly%20Care%20Children's%20Home%20(MCCH),%20Kenya", "_blank")}
+                  className="gradient-primary"
+                >
+                  <MapPin className="h-4 w-4 mr-2" />
+                  Get Directions
+                </Button>
+                <Button 
+                  onClick={() => window.location.href = "tel:+254704460726"}
+                  variant="outline"
+                >
+                  <Phone className="h-4 w-4 mr-2" />
+                  Call Before Visiting
+                </Button>
               </div>
             </div>
           </div>

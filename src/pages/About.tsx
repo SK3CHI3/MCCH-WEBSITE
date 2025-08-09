@@ -65,7 +65,7 @@ const About = () => {
               <h2 className="text-3xl font-bold text-foreground">Our Story & History</h2>
               <div className="space-y-4">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Founded by Mary Metobo ("Mama Mary") in 1998, Motherly Care began with just 10 children 
+                  Founded by the late Mary Metobo ("Mama Mary") in 1998, Motherly Care began with just 10 children 
                   after Mama Mary's own near-fatal train accident that changed her life's direction. 
                   What started as a small act of compassion has grown into a thriving children's home and school.
                 </p>

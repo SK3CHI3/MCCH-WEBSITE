@@ -26,9 +26,9 @@ const Index = () => {
               />
             </div>
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-foreground">About Motherly Care</h2>
+              <h2 className="text-3xl font-bold text-foreground">Welcome to Motherly Care</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Founded by Mary Metobo ("Mama Mary") in 1998, Motherly Care began with just 10 children 
+                Welcome to our family! Founded by the late Mary Metobo ("Mama Mary") in 1998, Motherly Care began with just 10 children 
                 after Mama Mary's own near-fatal train accident that changed her life's direction. 
                 We provide a safe, nurturing environment where children receive education, spiritual 
                 guidance, and life skills to become self-reliant and empowered individuals.
@@ -144,20 +144,20 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">150+</div>
-              <p className="text-muted-foreground">Children in Our Care</p>
+              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">150+</div>
+              <p className="text-sm md:text-base text-muted-foreground">Children Cared For</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">26</div>
-              <p className="text-muted-foreground">Years Since 1998</p>
+              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">12+</div>
+              <p className="text-sm md:text-base text-muted-foreground">Years of Service</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">1-17</div>
-              <p className="text-muted-foreground">Age Range We Serve</p>
+              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">500+</div>
+              <p className="text-sm md:text-base text-muted-foreground">Lives Transformed</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">100%</div>
-              <p className="text-muted-foreground">Love & Commitment</p>
+              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">100%</div>
+              <p className="text-sm md:text-base text-muted-foreground">Love & Commitment</p>
             </div>
           </div>
         </div>
@@ -178,7 +178,7 @@ const Index = () => {
               <h2 className="text-3xl font-bold text-foreground">Our Story Since 1998</h2>
               <div className="space-y-4">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Founded by Mary Metobo ("Mama Mary") in 1998, Motherly Care began with just 10 children 
+                  Founded by the late Mary Metobo ("Mama Mary") in 1998, Motherly Care began with just 10 children 
                   after Mama Mary's own near-fatal train accident that changed her life's direction.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">

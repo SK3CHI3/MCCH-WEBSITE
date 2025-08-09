@@ -137,7 +137,7 @@ const GetInvolved = () => {
       id: "visit",
       icon: Calendar,
       title: "Visit Us",
-      description: "Come celebrate with us! Birthdays, holidays, or any special occasion - we welcome visitors who want to share joy with our children",
+      description: "Come celebrate with us! Birthdays, holidays, or any special occasion - we welcome visitors who want to share joy with our children. Visiting Hours: Monday-Friday 9AM-5PM, Saturday & Sunday 10AM-3PM",
       details: {
         commitment: "Ongoing awareness efforts",
         duration: "As much as you can spare",
