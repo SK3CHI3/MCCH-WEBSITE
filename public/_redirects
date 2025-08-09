@@ -1,0 +1,12 @@
+# SPA routing - redirect all routes to index.html
+/*    /index.html   200
+
+# Custom redirects (if needed)
+# /old-page    /new-page    301
+
+# Force HTTPS
+http://motherlycarechildrenshome.org/*  https://motherlycarechildrenshome.org/:splat  301!
+http://www.motherlycarechildrenshome.org/*  https://motherlycarechildrenshome.org/:splat  301!
+
+# Remove www (if you want to redirect www to non-www)
+# www.motherlycarechildrenshome.org/*  https://motherlycarechildrenshome.org/:splat  301!

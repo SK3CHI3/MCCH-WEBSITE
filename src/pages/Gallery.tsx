@@ -7,22 +7,23 @@ import childrenGroup from "@/assets/children-group.jpg";
 import education from "@/assets/education.jpg";
 import facilities from "@/assets/facilities.jpg";
 
-// Gallery images from local /gallery folder
+// Gallery images from local /gallery folder with size variations
 const galleryImages = [
-  { id: 1, src: "/gallery/hero-1-min.jpg", title: "Group Photo", category: "facility", description: "A group photo at Motherly Care." },
-  { id: 2, src: "/gallery/hero-2-min.jpg", title: "Smiles", category: "children", description: "Children smiling at Motherly Care." },
-  { id: 3, src: "/gallery/hero-3-min.jpg", title: "Activities", category: "activities", description: "Fun activities at Motherly Care." },
-  { id: 4, src: "/gallery/hero-4-min.jpg", title: "Learning", category: "education", description: "Learning moments at Motherly Care." },
-  { id: 5, src: "/gallery/hero-5-min.jpg", title: "Playtime", category: "play", description: "Playtime at Motherly Care." },
-  { id: 6, src: "/gallery/469318253_549155091423432_3624827173028074347_n.jpg", title: "Outdoor Fun", category: "activities", description: "Outdoor fun at Motherly Care." },
-  { id: 7, src: "/gallery/481297623_1023022436519283_5725391079472523024_n.jpg", title: "Celebration", category: "achievements", description: "Celebrating achievements together." },
-  { id: 8, src: "/gallery/72673018_785831101830486_8444662335439634432_n.jpg", title: "School Life", category: "education", description: "A glimpse of school life." },
-  { id: 9, src: "/gallery/IMG-20250618-WA00119_cleanup.png", title: "Art & Creativity", category: "activities", description: "Art and creative time." },
-  { id: 10, src: "/gallery/kk0.jpg", title: "Friends", category: "children", description: "Friendship at Motherly Care." },
-  { id: 11, src: "/gallery/lklko.jpg", title: "Daily Life", category: "daily-life", description: "Everyday moments at Motherly Care." },
-  { id: 12, src: "/gallery/pp.jpg", title: "Playground", category: "play", description: "Playground fun." },
-  { id: 13, src: "/gallery/WhatsApp Image 2025-06-18 at 02.57.57_2e24ed7c.jpg", title: "Special Event", category: "achievements", description: "A special event at Motherly Care." },
-  { id: 14, src: "/gallery/WhatsApp Image 2025-06-22 at 22.43.20_eb42681b.jpg", title: "Community", category: "community", description: "Community gathering at Motherly Care." }
+  { id: 1, src: "/gallery/hero-1-min.jpg", title: "Group Photo", category: "facility", description: "A group photo at Motherly Care.", size: "large" },
+  { id: 2, src: "/gallery/hero-2-min.jpg", title: "Smiles", category: "children", description: "Children smiling at Motherly Care.", size: "medium" },
+  { id: 3, src: "/gallery/hero-3-min.jpg", title: "Activities", category: "activities", description: "Fun activities at Motherly Care.", size: "small" },
+  { id: 4, src: "/gallery/hero-4-min.jpg", title: "Learning", category: "education", description: "Learning moments at Motherly Care.", size: "large" },
+  { id: 5, src: "/gallery/hero-5-min.jpg", title: "Playtime", category: "play", description: "Playtime at Motherly Care.", size: "medium" },
+  { id: 6, src: "/gallery/469318253_549155091423432_3624827173028074347_n.jpg", title: "Outdoor Fun", category: "activities", description: "Outdoor fun at Motherly Care.", size: "small" },
+  { id: 7, src: "/gallery/481297623_1023022436519283_5725391079472523024_n.jpg", title: "Celebration", category: "achievements", description: "Celebrating achievements together.", size: "large" },
+  { id: 8, src: "/gallery/72673018_785831101830486_8444662335439634432_n.jpg", title: "School Life", category: "education", description: "A glimpse of school life.", size: "medium" },
+  { id: 9, src: "/gallery/IMG-20250618-WA00119_cleanup.png", title: "Art & Creativity", category: "activities", description: "Art and creative time.", size: "small" },
+  { id: 10, src: "/gallery/kk0.jpg", title: "Friends", category: "children", description: "Friendship at Motherly Care.", size: "large" },
+  { id: 11, src: "/gallery/lklko.jpg", title: "Daily Life", category: "daily-life", description: "Everyday moments at Motherly Care.", size: "medium" },
+  { id: 12, src: "/gallery/pp.jpg", title: "Playground", category: "play", description: "Playground fun.", size: "small" },
+  { id: 13, src: "/gallery/WhatsApp Image 2025-06-18 at 02.57.57_2e24ed7c.jpg", title: "Special Event", category: "achievements", description: "A special event at Motherly Care.", size: "large" },
+  { id: 14, src: "/gallery/WhatsApp Image 2025-06-22 at 22.43.20_eb42681b.jpg", title: "Community", category: "community", description: "Community gathering at Motherly Care.", size: "medium" },
+  { id: 15, src: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nocfH2KFQU9QVWa1o8QKX5jx_A1pnquUM9B6IELlqa47BFatVjFYtJi3cPnsVCw9J6wMmnRXsmdVN1fh7yRuq83EJUepdxiW-CvXgbUg8J3-rmOc8K4lqBu9Oft8KogCYtIeHb9Fw=w203-h152-k-no", title: "Motherly Care Location", category: "facilities", description: "Our hall used as church and gathering place.", size: "large" }
 ];
 
 const categories = [
@@ -84,6 +85,20 @@ const Gallery = () => {
 
   const currentImage = selectedImage ? filteredImages.find(img => img.id === selectedImage) : null;
 
+  // Get size classes for masonry layout
+  const getSizeClasses = (size: string) => {
+    switch (size) {
+      case 'large':
+        return 'col-span-2 row-span-2';
+      case 'medium':
+        return 'col-span-1 row-span-1';
+      case 'small':
+        return 'col-span-1 row-span-1';
+      default:
+        return 'col-span-1 row-span-1';
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -119,21 +134,21 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Gallery Grid */}
+      {/* Creative Gallery Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-4 auto-rows-[200px]">
             {filteredImages.map((image) => (
               <div
                 key={image.id}
-                className="group cursor-pointer overflow-hidden rounded-xl shadow-soft hover:shadow-medium transition-smooth"
+                className={`group cursor-pointer overflow-hidden rounded-xl shadow-soft hover:shadow-medium transition-all duration-500 hover:scale-[1.02] ${getSizeClasses(image.size)}`}
                 onClick={() => openLightbox(image.id)}
               >
-                <div className="relative aspect-square overflow-hidden bg-gray-100">
+                <div className="relative w-full h-full overflow-hidden bg-gray-100">
                   <img
                     src={image.src}
                     alt={image.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
                     onLoad={(e) => {
                       const target = e.target as HTMLImageElement;
@@ -145,12 +160,14 @@ const Gallery = () => {
                       <div className="animate-pulse bg-gray-200 w-full h-full"></div>
                     </div>
                   )}
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center p-4">
-                      <h3 className="font-semibold mb-1">{image.title}</h3>
-                      <p className="text-sm opacity-90">{image.description}</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+                    <div className="p-4 text-white w-full">
+                      <h3 className="font-semibold text-lg mb-1">{image.title}</h3>
+                      <p className="text-sm opacity-90 leading-relaxed">{image.description}</p>
                     </div>
                   </div>
+                  {/* Decorative corner accent */}
+                  <div className="absolute top-0 right-0 w-0 h-0 border-l-[20px] border-l-transparent border-t-[20px] border-t-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </div>
             ))}

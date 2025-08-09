@@ -18,13 +18,13 @@ const Index = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <img
-                src="/gallery/481297623_1023022436519283_5725391079472523024_n.jpg"
-                alt="Children at Motherly Care"
-                className="rounded-2xl shadow-strong w-full h-auto"
-              />
-            </div>
+                         <div>
+               <img
+                 src="/gallery/hero-5-min.jpg"
+                 alt="Children at Motherly Care"
+                 className="rounded-2xl shadow-strong w-full h-auto"
+               />
+             </div>
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-foreground">Welcome to Motherly Care</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -88,17 +88,17 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                icon: BookOpen,
-                title: "Education",
-                description: "Quality primary education following the Kenyan curriculum with qualified teachers and modern facilities.",
-                image: "/gallery/72673018_785831101830486_8444662335439634432_n.jpg"
-              },
+                             {
+                 icon: BookOpen,
+                 title: "Education",
+                 description: "Quality primary education following the Kenyan curriculum with qualified teachers and modern facilities.",
+                 image: "/gallery/WhatsApp Image 2025-06-18 at 02.57.57_2e24ed7c.jpg"
+               },
               {
                 icon: Heart,
                 title: "Spiritual Development", 
                 description: "Building strong moral foundations through spiritual guidance and character development programs.",
-                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop"
+                image: "/gallery/72673018_785831101830486_8444662335439634432_n.jpg"
               },
               {
                 icon: Users,
@@ -167,13 +167,13 @@ const Index = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <img
-                src={childrenGroup}
-                alt="Children at Motherly Care"
-                className="rounded-2xl shadow-strong w-full h-auto"
-              />
-            </div>
+                         <div>
+               <img
+                 src="/gallery/469318253_549155091423432_3624827173028074347_n.jpg"
+                 alt="Children at Motherly Care"
+                 className="rounded-2xl shadow-strong w-full h-auto"
+               />
+             </div>
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-foreground">Our Story Since 1998</h2>
               <div className="space-y-4">

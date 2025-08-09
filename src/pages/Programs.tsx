@@ -7,19 +7,19 @@ import facilities from "@/assets/facilities.jpg";
 
 const Programs = () => {
   const programs = [
-    {
-      icon: BookOpen,
-      title: "Primary Education",
-      description: "Comprehensive primary education following the Kenyan curriculum from nursery to Class 8.",
-      features: [
-        "Qualified teachers and modern teaching methods",
-        "Small class sizes for personalized attention",
-        "STEM subjects with hands-on learning",
-        "Library and reading programs",
-        "Regular assessments and progress tracking"
-      ],
-  image: "/gallery/72673018_785831101830486_8444662335439634432_n.jpg"
-    },
+         {
+       icon: BookOpen,
+       title: "Primary Education",
+       description: "Comprehensive primary education following the Kenyan curriculum from nursery to Class 8.",
+       features: [
+         "Qualified teachers and modern teaching methods",
+         "Small class sizes for personalized attention",
+         "STEM subjects with hands-on learning",
+         "Library and reading programs",
+         "Regular assessments and progress tracking"
+       ],
+   image: "/gallery/WhatsApp Image 2025-06-18 at 02.57.57_2e24ed7c.jpg"
+     },
     {
       icon: Heart,
       title: "Spiritual Development",
@@ -31,7 +31,7 @@ const Programs = () => {
         "Moral and ethical education",
         "Community service projects"
       ],
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop"
+      image: "/gallery/72673018_785831101830486_8444662335439634432_n.jpg"
     },
     {
       icon: Users,

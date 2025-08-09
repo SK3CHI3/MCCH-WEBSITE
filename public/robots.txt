@@ -1,14 +1,21 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
+
+# Sitemap location
+Sitemap: https://motherlycarechildrenshome.org/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow admin or private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all important directories
+Allow: /gallery/
+Allow: /assets/
+Allow: /about/
+Allow: /programs/
+Allow: /contact/
+Allow: /children/
+Allow: /get-involved/
