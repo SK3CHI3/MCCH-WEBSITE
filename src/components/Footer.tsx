@@ -8,17 +8,43 @@ const Footer = () => {
   const [visitCount, setVisitCount] = useState<number | null>(null);
 
   useEffect(() => {
-    fetch('https://api.counterapi.dev/v1/motherlycarechildrenshome.org/visits/up')
-      .then(res => res.ok ? res.json() : Promise.reject(res))
-      .then(data => {
-        // v1 returns { namespace, name, value }
-        if (data && typeof data.value === 'number') {
-          setVisitCount(data.value);
-        } else {
-          setVisitCount(0);
-        }
-      })
-      .catch(() => setVisitCount(0));
+    // Check if this is a new session (not a refresh)
+    const hasVisited = sessionStorage.getItem('mcch_visited');
+    
+    if (!hasVisited) {
+      // This is a new visit, increment the counter
+      fetch('https://api.counterapi.dev/v1/motherlycarechildrenshome.org/visits/up')
+        .then(res => res.ok ? res.json() : Promise.reject(res))
+        .then(data => {
+          if (data && typeof data.count === 'number') {
+            setVisitCount(data.count);
+            // Mark as visited for this session
+            sessionStorage.setItem('mcch_visited', 'true');
+          } else {
+            setVisitCount(0);
+          }
+        })
+        .catch(() => setVisitCount(0));
+    } else {
+      // This is a refresh, get the count from localStorage or fetch again
+      const cachedCount = localStorage.getItem('mcch_visit_count');
+      if (cachedCount) {
+        setVisitCount(parseInt(cachedCount));
+      } else {
+        // Fallback: fetch the current count (this will increment, but only on first load)
+        fetch('https://api.counterapi.dev/v1/motherlycarechildrenshome.org/visits/up')
+          .then(res => res.ok ? res.json() : Promise.reject(res))
+          .then(data => {
+            if (data && typeof data.count === 'number') {
+              setVisitCount(data.count);
+              localStorage.setItem('mcch_visit_count', data.count.toString());
+            } else {
+              setVisitCount(0);
+            }
+          })
+          .catch(() => setVisitCount(0));
+      }
+    }
   }, []);
 
   return (
