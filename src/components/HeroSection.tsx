@@ -50,7 +50,7 @@ const HeroSection = () => {
                   key={index}
                   src={image.src}
                   alt={image.alt}
-                  className={`absolute inset-0 w-full h-full object-cover animate-subtle-zoom transition-opacity duration-1000 ease-in-out ${
+                  className={`absolute inset-0 w-full h-full object-cover md:object-cover animate-subtle-zoom transition-opacity duration-1000 ease-in-out ${
                     index === current ? 'opacity-100' : 'opacity-0'
                   }`}
                 />
@@ -96,10 +96,10 @@ const HeroSection = () => {
             </span>
           </div>
 
-          {/* Main Heading */}
-          <h1 className="text-2xl sm:text-3xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-4 md:mb-6 leading-tight animate-fade-in">
+          {/* Main Heading - Back to original size */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-4 md:mb-6 leading-tight animate-fade-in">
             Motherly Care
-            <span className="block text-lg sm:text-xl md:text-5xl lg:text-6xl font-normal opacity-90 mt-1 md:mt-2">
+            <span className="block text-3xl md:text-5xl lg:text-6xl font-normal opacity-90 mt-1 md:mt-2">
               Children's Home & School Centre
             </span>
           </h1>
