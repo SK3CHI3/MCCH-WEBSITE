@@ -18,7 +18,7 @@ const Programs = () => {
          "Small class sizes for personalized attention",
          "Preparation for Senior School transition"
        ],
-   image: "/gallery/WhatsApp Image 2025-06-18 at 02.57.57_2e24ed7c.jpg"
+   image: "/gallery/education going on.jpg"
      },
     {
       icon: Heart,
@@ -31,7 +31,7 @@ const Programs = () => {
         "Moral and ethical education",
         "Community service projects"
       ],
-      image: "/gallery/72673018_785831101830486_8444662335439634432_n.jpg"
+      image: "/gallery/evening devotion.jpg"
     },
     {
       icon: Users,

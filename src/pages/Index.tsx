@@ -20,7 +20,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                          <div>
                <img
-                 src="/gallery/our gate_11zon.jpg"
+                 src="/gallery/main gate use as main.jpg"
                  alt="Main entrance gate of Motherly Care"
                  className="rounded-2xl shadow-strong w-full h-auto"
                />
@@ -92,13 +92,13 @@ const Index = () => {
                  icon: BookOpen,
                  title: "CBE Education",
                  description: "Competency-Based Education following Kenya's new holistic education system that focuses on developing learners' skills, knowledge, attitudes, and values.",
-                 image: "/gallery/WhatsApp Image 2025-06-18 at 02.57.57_2e24ed7c.jpg"
+                 image: "/gallery/education going on.jpg"
                },
               {
                 icon: Heart,
                 title: "Spiritual Development", 
                 description: "Building strong moral foundations through spiritual guidance and character development programs.",
-                image: "/gallery/72673018_785831101830486_8444662335439634432_n.jpg"
+                image: "/gallery/evening devotion.jpg"
               },
               {
                 icon: Users,
