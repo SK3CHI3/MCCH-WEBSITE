@@ -9,14 +9,14 @@ const Programs = () => {
   const programs = [
          {
        icon: BookOpen,
-       title: "Primary Education",
-       description: "Comprehensive primary education following the Kenyan curriculum from nursery to Class 8.",
+       title: "CBE Education",
+       description: "Competency-Based Education following Kenya's new holistic education system that focuses on developing learners' skills, knowledge, attitudes, and values.",
        features: [
-         "Qualified teachers and modern teaching methods",
+         "Holistic development of individual passions and talents",
+         "Real-world application and skill acquisition",
+         "Modern pedagogy and assessment methods",
          "Small class sizes for personalized attention",
-         "STEM subjects with hands-on learning",
-         "Library and reading programs",
-         "Regular assessments and progress tracking"
+         "Preparation for Senior School transition"
        ],
    image: "/gallery/WhatsApp Image 2025-06-18 at 02.57.57_2e24ed7c.jpg"
      },
@@ -44,7 +44,7 @@ const Programs = () => {
         "Time management and organization",
         "Leadership and teamwork development"
       ],
-      image: "https://images.unsplash.com/photo-1544717301-9cdcb1f5940f?w=800&h=600&fit=crop"
+      image: "/gallery/playground for our little children_11zon.jpg"
     },
     {
       icon: Wrench,

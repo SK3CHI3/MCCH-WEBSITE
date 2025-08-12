@@ -20,8 +20,8 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                          <div>
                <img
-                 src="/gallery/arial view facilities_11zon.jpg"
-                 alt="Aerial view of Motherly Care facilities"
+                 src="/gallery/our gate_11zon.jpg"
+                 alt="Main entrance gate of Motherly Care"
                  className="rounded-2xl shadow-strong w-full h-auto"
                />
              </div>
@@ -90,8 +90,8 @@ const Index = () => {
             {[
                              {
                  icon: BookOpen,
-                 title: "Education",
-                 description: "Quality primary education following the Kenyan curriculum with qualified teachers and modern facilities.",
+                 title: "CBE Education",
+                 description: "Competency-Based Education following Kenya's new holistic education system that focuses on developing learners' skills, knowledge, attitudes, and values.",
                  image: "/gallery/WhatsApp Image 2025-06-18 at 02.57.57_2e24ed7c.jpg"
                },
               {
