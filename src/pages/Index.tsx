@@ -20,8 +20,8 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                          <div>
                <img
-                 src="/gallery/hero-5-min.jpg"
-                 alt="Children at Motherly Care"
+                 src="/gallery/arial view facilities_11zon.jpg"
+                 alt="Aerial view of Motherly Care facilities"
                  className="rounded-2xl shadow-strong w-full h-auto"
                />
              </div>
@@ -104,7 +104,7 @@ const Index = () => {
                 icon: Users,
                 title: "Life Skills",
                 description: "Essential life skills training to prepare children for independent living and future success.",
-                image: "/gallery/pp.jpg"
+                image: "/gallery/playground for our little children_11zon.jpg"
               }
             ].map((program, index) => (
               <div key={index} className="bg-background rounded-xl shadow-soft hover:shadow-medium transition-smooth border border-border overflow-hidden">

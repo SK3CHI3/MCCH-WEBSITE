@@ -23,7 +23,12 @@ const galleryImages = [
   { id: 12, src: "/gallery/pp.jpg", title: "Playground", category: "play", description: "Playground fun.", size: "small" },
   { id: 13, src: "/gallery/WhatsApp Image 2025-06-18 at 02.57.57_2e24ed7c.jpg", title: "Special Event", category: "achievements", description: "A special event at Motherly Care.", size: "large" },
   { id: 14, src: "/gallery/WhatsApp Image 2025-06-22 at 22.43.20_eb42681b.jpg", title: "Community", category: "community", description: "Community gathering at Motherly Care.", size: "medium" },
-  { id: 15, src: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nocfH2KFQU9QVWa1o8QKX5jx_A1pnquUM9B6IELlqa47BFatVjFYtJi3cPnsVCw9J6wMmnRXsmdVN1fh7yRuq83EJUepdxiW-CvXgbUg8J3-rmOc8K4lqBu9Oft8KogCYtIeHb9Fw=w203-h152-k-no", title: "Motherly Care Location", category: "facilities", description: "Our hall used as church and gathering place.", size: "large" }
+  { id: 15, src: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nocfH2KFQU9QVWa1o8QKX5jx_A1pnquUM9B6IELlqa47BFatVjFYtJi3cPnsVCw9J6wMmnRXsmdVN1fh7yRuq83EJUepdxiW-CvXgbUg8J3-rmOc8K4lqBu9Oft8KogCYtIeHb9Fw=w203-h152-k-no", title: "Motherly Care Location", category: "facilities", description: "Our hall used as church and gathering place.", size: "large" },
+  { id: 16, src: "/gallery/arial view facilities_11zon.jpg", title: "Aerial View of Facilities", category: "facilities", description: "Bird's eye view of our complete facility showing all buildings and grounds.", size: "large" },
+  { id: 17, src: "/gallery/playground for our little children_11zon.jpg", title: "Children's Playground", category: "facilities", description: "Our dedicated playground where children can play, exercise, and have fun.", size: "medium" },
+  { id: 18, src: "/gallery/our gate_11zon.jpg", title: "Main Entrance Gate", category: "facilities", description: "The main entrance gate to Motherly Care Children's Home.", size: "small" },
+  { id: 19, src: "/gallery/our chicken farm_11zon.jpg", title: "Chicken Farm", category: "livelihood", description: "Our chicken farm providing fresh eggs and meat for the children.", size: "medium" },
+  { id: 20, src: "/gallery/boys dointory_11zon.jpg", title: "Boys' Dormitory", category: "facilities", description: "The boys' dormitory where our male children sleep and rest.", size: "large" }
 ];
 
 const categories = [
@@ -33,7 +38,8 @@ const categories = [
   { id: "facilities", label: "Facilities" },
   { id: "activities", label: "Activities" },
   { id: "daily-life", label: "Daily Life" },
-  { id: "achievements", label: "Achievements" }
+  { id: "achievements", label: "Achievements" },
+  { id: "livelihood", label: "Livelihood" }
 ];
 
 const Gallery = () => {

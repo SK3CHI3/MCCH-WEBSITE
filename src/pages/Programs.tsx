@@ -57,7 +57,7 @@ const Programs = () => {
         "Agriculture and farming techniques",
         "Small business and entrepreneurship"
       ],
-      image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&h=600&fit=crop"
+      image: "/gallery/our chicken farm_11zon.jpg"
     },
     {
       icon: GraduationCap,
@@ -83,7 +83,7 @@ const Programs = () => {
         "Counseling and emotional support",
         "Family-style living environment"
       ],
-  image: "/gallery/pp.jpg"
+  image: "/gallery/boys dointory_11zon.jpg"
     }
   ];
 
