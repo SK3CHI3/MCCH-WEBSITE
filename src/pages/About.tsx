@@ -1,4 +1,4 @@
-import { CheckCircle, Heart, Users, BookOpen, Target, Eye } from "lucide-react";
+import { CheckCircle, Heart, Users, BookOpen, Target, Eye, MapPin } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import childrenGroup from "@/assets/children-group.jpg";
@@ -207,11 +207,27 @@ const About = () => {
               </div>
             </div>
             <div>
-              <img
-                src={education}
-                alt="Education at Motherly Care"
-                className="rounded-2xl shadow-strong w-full h-auto"
-              />
+              <div className="rounded-2xl overflow-hidden shadow-strong">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8492028067953!2d37.009064190179494!3d-1.2628683742534852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f6b3e21deb78f%3A0x4ddc149254afd631!2sMotherly%20Care%20Children&#39;s%20Home%20(MCCH)!5e0!3m2!1sen!2ske!4v1754692764972!5m2!1sen!2ske" 
+                  width="100%" 
+                  height="400" 
+                  style={{border:0}} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full"
+                />
+              </div>
+              <div className="text-center mt-4">
+                <button 
+                  onClick={() => window.open("https://maps.google.com/maps/dir/?api=1&destination=Motherly%20Care%20Children's%20Home%20(MCCH),%20Kenya", "_blank")}
+                  className="inline-flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                >
+                  <MapPin className="h-4 w-4 mr-2" />
+                  Get Directions
+                </button>
+              </div>
             </div>
           </div>
         </div>
