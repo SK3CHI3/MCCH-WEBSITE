@@ -10,8 +10,14 @@ const GetInvolved = () => {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const tab = urlParams.get('tab');
-    if (tab) {
+    if (tab && ways.some(way => way.id === tab)) {
       setActiveTab(tab);
+      // If it's the donate tab, scroll to donation section after a short delay
+      if (tab === 'donate') {
+        setTimeout(() => {
+          document.getElementById('donation-section')?.scrollIntoView({ behavior: 'smooth' });
+        }, 500);
+      }
     }
   }, []);
 
@@ -272,7 +278,7 @@ const GetInvolved = () => {
                     <div className="mt-6">
                       <Button 
                         onClick={() => {
-                          if (activeWay.title === "Make a Donation") {
+                          if (activeWay.id === "donate") {
                             document.getElementById('donation-section')?.scrollIntoView({ behavior: 'smooth' });
                           } else {
                             window.location.href = "tel:+254704460726";
@@ -280,7 +286,7 @@ const GetInvolved = () => {
                         }}
                         className="w-full gradient-primary shadow-medium hover:shadow-strong transition-smooth"
                       >
-                        {activeWay.title === "Make a Donation" ? "View Payment Options" : "Call +254 704 460 726"}
+                        {activeWay.id === "donate" ? "View Payment Options" : "Call +254 704 460 726"}
                       </Button>
                     </div>
                   </div>
