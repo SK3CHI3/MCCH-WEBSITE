@@ -4,73 +4,73 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
-// Mock data for children available for sponsorship
+// Children data with real images from our gallery
 const childrenData = [
   {
     id: 1,
-    name: "Grace Wanjiku",
-    age: 8,
-    grade: "Class 3",
+    name: "Bilha",
+    age: 10,
+    grade: "Class 5",
     interests: ["Reading", "Art", "Singing"],
-    story: "Grace loves to draw and dreams of becoming an artist. She excels in her studies and helps younger children with their homework.",
+    story: "Bilha loves to draw and dreams of becoming an artist. She excels in her studies and helps younger children with their homework.",
     monthlyNeed: 50,
     sponsored: false,
-    profileImage: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=400&h=400&fit=crop&crop=face"
+    profileImage: "/gallery/lklko.jpg"
   },
   {
     id: 2,
-    name: "David Kiprotich",
+    name: "Edel Queen",
     age: 12,
     grade: "Class 7",
     interests: ["Football", "Mathematics", "Science"],
-    story: "David is passionate about science and wants to become a doctor. He's the captain of our football team and shows great leadership skills.",
+    story: "Edel Queen is passionate about science and wants to become a doctor. She shows great leadership skills and excels in her studies.",
     monthlyNeed: 60,
     sponsored: false,
-    profileImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
+    profileImage: "/gallery/ourstudent edel queen.jpg"
   },
   {
     id: 3,
-    name: "Faith Akinyi",
-    age: 10,
+    name: "Mage",
+    age: 11,
     grade: "Class 5",
     interests: ["Dancing", "Cooking", "Storytelling"],
-    story: "Faith has a beautiful voice and loves to sing in our choir. She dreams of becoming a teacher to help other children learn.",
+    story: "Mage has a beautiful voice and loves to sing in our choir. She dreams of becoming a teacher to help other children learn.",
     monthlyNeed: 55,
-    sponsored: true,
-    profileImage: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=400&fit=crop&crop=face"
+    sponsored: false,
+    profileImage: "/gallery/ourstudents Mage class 5.png"
   },
   {
     id: 4,
-    name: "Samuel Ochieng",
-    age: 14,
-    grade: "Class 8",
+    name: "Group of Friends",
+    age: "8-14",
+    grade: "Various Classes",
     interests: ["Technology", "Building", "Music"],
-    story: "Samuel is fascinated by technology and computers. He helps maintain our computer lab and teaches other children basic computer skills.",
+    story: "These children are fascinated by technology and computers. They help maintain our computer lab and teach other children basic computer skills.",
     monthlyNeed: 65,
     sponsored: false,
-    profileImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+    profileImage: "/gallery/kk0.jpg"
   },
   {
     id: 5,
-    name: "Mary Njeri",
-    age: 9,
-    grade: "Class 4",
+    name: "Children at Play",
+    age: "6-12",
+    grade: "Various Classes",
     interests: ["Writing", "Gardening", "Animals"],
-    story: "Mary loves animals and wants to become a veterinarian. She takes care of our garden and writes beautiful stories about nature.",
+    story: "These children love animals and outdoor activities. They take care of our garden and enjoy playing together.",
     monthlyNeed: 52,
     sponsored: false,
-    profileImage: "https://images.unsplash.com/photo-1554151228-14d9def656e4?w=400&h=400&fit=crop&crop=face"
+    profileImage: "/gallery/we out playing.jpg"
   },
   {
     id: 6,
-    name: "Peter Mwangi",
-    age: 13,
-    grade: "Class 7",
+    name: "Graduation Students",
+    age: "13-14",
+    grade: "Class 8",
     interests: ["Art", "History", "Drama"],
-    story: "Peter is a talented artist who creates beautiful paintings. He's also passionate about drama and often leads our school performances.",
+    story: "These talented students are graduating from our primary school. They are passionate about drama and often lead our school performances.",
     monthlyNeed: 58,
-    sponsored: true,
-    profileImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
+    sponsored: false,
+    profileImage: "/gallery/graduation ceremony.jpg"
   }
 ];
 

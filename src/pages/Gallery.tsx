@@ -31,7 +31,7 @@ const galleryImages = [
   { id: 20, src: "/gallery/hero-4-min.jpg", title: "Learning", category: "education", description: "Learning moments and educational activities." },
   { id: 21, src: "/gallery/hero-5-min.jpg", title: "Playtime", category: "activities", description: "Children enjoying playtime and recreation." },
   { id: 22, src: "/gallery/kk0.jpg", title: "Friends", category: "children", description: "Friendship and bonding among our children." },
-  { id: 23, src: "/gallery/lklko.jpg", title: "Daily Life", category: "daily-life", description: "Everyday moments and daily activities at Motherly Care." }
+  { id: 23, src: "/gallery/lklko.jpg", title: "Bilha", category: "children", description: "One of our children, Bilha, at Motherly Care." }
 ];
 
 const categories = [
