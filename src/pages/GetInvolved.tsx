@@ -280,13 +280,16 @@ const GetInvolved = () => {
                         onClick={() => {
                           if (activeWay.id === "donate") {
                             document.getElementById('donation-section')?.scrollIntoView({ behavior: 'smooth' });
+                          } else if (activeWay.id === "sponsor") {
+                            window.location.href = "/children";
                           } else {
                             window.location.href = "tel:+254704460726";
                           }
                         }}
                         className="w-full gradient-primary shadow-medium hover:shadow-strong transition-smooth"
                       >
-                        {activeWay.id === "donate" ? "View Payment Options" : "Call +254 704 460 726"}
+                        {activeWay.id === "donate" ? "View Payment Options" : 
+                         activeWay.id === "sponsor" ? "Sponsor a Child Now" : "Call +254 704 460 726"}
                       </Button>
                     </div>
                   </div>
