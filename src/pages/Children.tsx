@@ -3,6 +3,7 @@ import { Heart, Calendar, MapPin, BookOpen, Star } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import SponsorshipForm from "@/components/SponsorshipForm";
 
 // Children data with real images from our gallery
 const childrenData = [
@@ -77,10 +78,14 @@ const childrenData = [
 const Children = () => {
   // Remove filtering since we're removing the sponsored concept
   const filteredChildren = childrenData.filter(child => !child.sponsored); // Only show available children
+  const [selectedChild, setSelectedChild] = useState<string | null>(null);
 
   const handleSponsorClick = (childName: string) => {
-    // In a real app, this would open a sponsorship form or redirect to a payment page
-    alert(`Thank you for your interest in sponsoring ${childName}! This would redirect to our sponsorship form.`);
+    setSelectedChild(childName);
+  };
+
+  const handleCloseForm = () => {
+    setSelectedChild(null);
   };
 
   return (
@@ -235,6 +240,14 @@ const Children = () => {
       </section>
 
       <Footer />
+      
+      {/* Sponsorship Form Modal */}
+      {selectedChild && (
+        <SponsorshipForm 
+          childName={selectedChild} 
+          onClose={handleCloseForm} 
+        />
+      )}
     </div>
   );
 };
