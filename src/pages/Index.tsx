@@ -22,7 +22,7 @@ const Index = () => {
                <img
                  src="/gallery/main gate use as main.jpg"
                  alt="Main entrance gate of Motherly Care"
-                 className="rounded-2xl shadow-strong w-full h-auto"
+                 className="rounded-2xl shadow-strong w-full h-80 object-cover"
                />
              </div>
             <div className="space-y-6">
@@ -169,8 +169,8 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                          <div>
                <img
-                 src="/gallery/469318253_549155091423432_3624827173028074347_n.jpg"
-                 alt="Children at Motherly Care"
+                 src="/gallery/we out playing.jpg"
+                 alt="Children playing at Motherly Care"
                  className="rounded-2xl shadow-strong w-full h-auto"
                />
              </div>
