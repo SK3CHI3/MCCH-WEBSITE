@@ -9,69 +9,29 @@ import SponsorshipForm from "@/components/SponsorshipForm";
 const childrenData = [
   {
     id: 1,
-    name: "Bilha",
-    age: 10,
-    grade: "Class 5",
-    interests: ["Reading", "Art", "Singing"],
-    story: "Bilha loves to draw and dreams of becoming an artist. She excels in her studies and helps younger children with their homework.",
-    monthlyNeed: 50,
-    sponsored: false,
-    profileImage: "/gallery/lklko.jpg"
-  },
-  {
-    id: 2,
-    name: "Edel Queen",
-    age: 12,
-    grade: "Class 7",
-    interests: ["Football", "Mathematics", "Science"],
-    story: "Edel Queen is passionate about science and wants to become a doctor. She shows great leadership skills and excels in her studies.",
-    monthlyNeed: 60,
-    sponsored: false,
-    profileImage: "/gallery/ourstudent edel queen.jpg"
-  },
-  {
-    id: 3,
-    name: "Mage",
-    age: 11,
-    grade: "Class 5",
-    interests: ["Dancing", "Cooking", "Storytelling"],
-    story: "Mage has a beautiful voice and loves to sing in our choir. She dreams of becoming a teacher to help other children learn.",
-    monthlyNeed: 55,
-    sponsored: false,
-    profileImage: "/gallery/ourstudents Mage class 5.png"
-  },
-  {
-    id: 4,
-    name: "Group of Friends",
-    age: "8-14",
-    grade: "Various Classes",
-    interests: ["Technology", "Building", "Music"],
-    story: "These children are fascinated by technology and computers. They help maintain our computer lab and teach other children basic computer skills.",
-    monthlyNeed: 65,
-    sponsored: false,
-    profileImage: "/gallery/kk0.jpg"
-  },
-  {
-    id: 5,
     name: "Children at Play",
-    age: "6-12",
+    age: "6-12 years",
     grade: "Various Classes",
     interests: ["Writing", "Gardening", "Animals"],
     story: "These children love animals and outdoor activities. They take care of our garden and enjoy playing together.",
-    monthlyNeed: 52,
+    monthlyNeed: 185,
     sponsored: false,
-    profileImage: "/gallery/we out playing.jpg"
+    profileImage: "/gallery/we out playing.jpg",
+    annualFees: 185,
+    feesDescription: "Includes: Tuition, books, stationery, uniforms, learning materials"
   },
   {
-    id: 6,
+    id: 2,
     name: "Graduation Students",
-    age: "13-14",
-    grade: "Class 8",
+    age: "13-14 years",
+    grade: "Grade 6",
     interests: ["Art", "History", "Drama"],
     story: "These talented students are graduating from our primary school. They are passionate about drama and often lead our school performances.",
-    monthlyNeed: 58,
+    monthlyNeed: 185,
     sponsored: false,
-    profileImage: "/gallery/graduation ceremony.jpg"
+    profileImage: "/gallery/graduation ceremony.jpg",
+    annualFees: 185,
+    feesDescription: "Includes: Tuition, books, stationery, uniforms, learning materials"
   }
 ];
 
@@ -128,7 +88,7 @@ const Children = () => {
       {/* Children Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {filteredChildren.map((child) => (
               <div 
                 key={child.id}
@@ -155,7 +115,7 @@ const Children = () => {
                     <h3 className="text-xl font-bold text-foreground">{child.name}</h3>
                     <div className="flex items-center text-muted-foreground text-sm">
                       <Calendar className="h-4 w-4 mr-1" />
-                      {child.age} years
+                      {child.age}
                     </div>
                   </div>
 
