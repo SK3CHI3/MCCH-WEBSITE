@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { ArrowRight, Heart, Users, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -100,7 +101,7 @@ const HeroSection = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-4 md:mb-6 leading-tight animate-fade-in">
             Motherly Care
             <span className="block text-3xl md:text-5xl lg:text-6xl font-normal opacity-90 mt-1 md:mt-2">
-              Children's Home & School Centre
+              Children's Home & Educational Centre
             </span>
           </h1>
 
@@ -120,13 +121,15 @@ const HeroSection = () => {
               Sponsor a Child
               <ArrowRight className="ml-2 h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button 
-              variant="outline" 
-              size="default"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 text-sm md:text-base"
-            >
-              Learn More About Us
-            </Button>
+            <Link to="/about">
+              <Button 
+                variant="outline" 
+                size="default"
+                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/20 hover:border-primary-foreground/80 text-sm md:text-base bg-transparent"
+              >
+                Learn More About Us
+              </Button>
+            </Link>
           </div>
 
           {/* Stats - Smaller on Mobile */}
