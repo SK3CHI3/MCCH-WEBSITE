@@ -64,22 +64,6 @@ const Contact = () => {
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
-                    <MapPin className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">Our Location</h3>
-                    <p className="text-muted-foreground">
-                      Off Kangundo Road, Ruai<br />
-                      1 km from Ruai Junction<br />
-                      Near Quick Mart and Baraka shop<br />
-                      P.O. Box 3271–00506 Nairobi<br />
-                      Kenya
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
                   <div>

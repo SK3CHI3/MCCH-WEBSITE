@@ -35,17 +35,16 @@ const SponsorshipForm = ({ childName, onClose }: SponsorshipFormProps) => {
 
     try {
       // Prepare email content
-      const emailSubject = `Sponsorship Interest for ${childName}`;
+      const emailSubject = `Support Our Children - Motherly Care`;
       const emailBody = `
-New Sponsorship Interest
+New Support Interest for Our Children
 
-Child: ${childName}
 Sponsor Name: ${formData.sponsorName}
 Email: ${formData.email}
 Phone: ${formData.phone}
 Address: ${formData.address}
 Preferred Contact: ${formData.preferredContact}
-Sponsorship Amount: $${formData.sponsorshipAmount}
+Support Amount: $${formData.sponsorshipAmount}
 Payment Frequency: ${formData.paymentFrequency}
 Additional Message: ${formData.additionalMessage}
 
@@ -76,7 +75,7 @@ This form was submitted from the Motherly Care website.
           </div>
           <h3 className="text-xl font-bold text-foreground mb-2">Thank You!</h3>
           <p className="text-muted-foreground mb-4">
-            Your sponsorship interest for {childName} has been sent. We'll contact you soon to discuss the next steps.
+            Your interest in supporting our children has been sent. We'll contact you soon to discuss the next steps.
           </p>
           <Button onClick={onClose} className="w-full">
             Close
@@ -92,8 +91,8 @@ This form was submitted from the Motherly Care website.
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h2 className="text-2xl font-bold text-foreground">Sponsor {childName}</h2>
-            <p className="text-muted-foreground">Complete the form below to express your interest in sponsorship</p>
+            <h2 className="text-2xl font-bold text-foreground">Support Our Children</h2>
+            <p className="text-muted-foreground">Complete the form below to express your interest in supporting our children's education</p>
           </div>
           <button
             onClick={onClose}
@@ -187,24 +186,22 @@ This form was submitted from the Motherly Care website.
 
           {/* Sponsorship Details */}
           <div className="border-t border-border pt-6">
-            <h3 className="text-lg font-semibold text-foreground mb-4">Sponsorship Details</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-4">Support Details</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
                   <DollarSign className="h-4 w-4 inline mr-1" />
-                  Monthly Amount *
+                  Annual Support Amount *
                 </label>
                 <select
                   name="sponsorshipAmount"
                   value={formData.sponsorshipAmount}
                   onChange={handleInputChange}
-                  required
                   className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                 >
-                  <option value="25">$25 - Basic Support</option>
-                  <option value="50">$50 - Standard Sponsorship</option>
-                  <option value="65">$65 - Premium Sponsorship</option>
-                  <option value="100">$100 - Comprehensive Support</option>
+                  <option value="185">$185 USD - Full Annual Support</option>
+                  <option value="100">$100 USD - Partial Support</option>
+                  <option value="50">$50 USD - Basic Support</option>
                   <option value="custom">Custom Amount</option>
                 </select>
               </div>
@@ -218,9 +215,10 @@ This form was submitted from the Motherly Care website.
                   onChange={handleInputChange}
                   className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                 >
-                  <option value="monthly">Monthly</option>
+                  <option value="annual">Annual (Recommended)</option>
+                  <option value="semi-annual">Semi-Annual</option>
                   <option value="quarterly">Quarterly</option>
-                  <option value="annually">Annually</option>
+                  <option value="monthly">Monthly</option>
                 </select>
               </div>
             </div>

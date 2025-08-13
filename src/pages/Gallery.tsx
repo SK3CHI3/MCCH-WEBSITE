@@ -9,17 +9,17 @@ import facilities from "@/assets/facilities.jpg";
 
 // Gallery images from local /gallery folder - updated with new file names
 const galleryImages = [
-  { id: 1, src: "/gallery/main gate use as main.jpg", title: "Main Entrance Gate", category: "facilities", description: "The main entrance gate to Motherly Care Children's Home." },
-  { id: 2, src: "/gallery/best arieal photo.jpg", title: "Aerial View of Facilities", category: "facilities", description: "Bird's eye view of our complete facility showing all buildings and grounds." },
-  { id: 3, src: "/gallery/facilities.jpg", title: "Our Facilities", category: "facilities", description: "Overview of our main facilities and buildings." },
-  { id: 4, src: "/gallery/our hall 2.jpg", title: "Main Hall", category: "facilities", description: "Our main hall used for church services and gatherings." },
-  { id: 5, src: "/gallery/boys dointory_11zon.jpg", title: "Boys' Dormitory", category: "facilities", description: "The boys' dormitory where our male children sleep and rest." },
-  { id: 6, src: "/gallery/our chicken farm_11zon.jpg", title: "Chicken Farm", category: "livelihood", description: "Our chicken farm providing fresh eggs and meat for the children." },
-  { id: 7, src: "/gallery/playground main use this.jpg", title: "Main Playground", category: "facilities", description: "Our main playground where children play and exercise." },
+  { id: 1, src: "/gallery/main gate use as main.jpg", title: "Main Gate", category: "facilities", description: "The main entrance gate of Motherly Care Children's Home." },
+  { id: 2, src: "/gallery/best arieal photo.jpg", title: "Aerial View", category: "facilities", description: "Aerial view of our facilities and grounds." },
+  { id: 3, src: "/gallery/arial view facilities_11zon.jpg", title: "Facilities Overview", category: "facilities", description: "Overview of our facilities from above." },
+  { id: 4, src: "/gallery/boys dointory_11zon.jpg", title: "Boys Dormitory", category: "facilities", description: "Our boys dormitory building." },
+  { id: 5, src: "/gallery/breakfast is served.jpg", title: "Breakfast Time", category: "daily-life", description: "Children enjoying their nutritious breakfast." },
+  { id: 6, src: "/gallery/education going on.jpg", title: "Education in Progress", category: "education", description: "Active learning and education taking place at Motherly Care." },
+  { id: 7, src: "/gallery/evening devotion.jpg", title: "Evening Devotion", category: "spiritual", description: "Evening prayer and devotion time with our children." },
   { id: 8, src: "/gallery/playground for our little children_11zon.jpg", title: "Children's Playground", category: "facilities", description: "Our dedicated playground where children can play, exercise, and have fun." },
   { id: 9, src: "/gallery/education going on.jpg", title: "Education in Progress", category: "education", description: "Active learning and education taking place at Motherly Care." },
-  { id: 10, src: "/gallery/ourstudents Mage class 5.png", title: "Class 5 Students", category: "education", description: "Our Class 5 students engaged in learning activities." },
-  { id: 11, src: "/gallery/ourstudent edel queen.jpg", title: "Student Spotlight", category: "education", description: "One of our bright students at Motherly Care." },
+  { id: 10, src: "/gallery/evening devotion.jpg", title: "Evening Devotion", category: "spiritual", description: "Evening prayer and devotion time with our children." },
+  { id: 11, src: "/gallery/breakfast is served.jpg", title: "Breakfast Time", category: "daily-life", description: "Children enjoying their nutritious breakfast." },
   { id: 12, src: "/gallery/evening devotion.jpg", title: "Evening Devotion", category: "spiritual", description: "Evening prayer and devotion time with our children." },
   { id: 13, src: "/gallery/breakfast is served.jpg", title: "Breakfast Time", category: "daily-life", description: "Children enjoying their nutritious breakfast." },
   { id: 14, src: "/gallery/we out playing.jpg", title: "Outdoor Play", category: "activities", description: "Children enjoying outdoor play and activities." },
@@ -29,9 +29,7 @@ const galleryImages = [
   { id: 18, src: "/gallery/hero-2-min.jpg", title: "Smiles", category: "children", description: "Children smiling and happy at Motherly Care." },
   { id: 19, src: "/gallery/hero-3-min.jpg", title: "Activities", category: "activities", description: "Fun activities and learning moments." },
   { id: 20, src: "/gallery/hero-4-min.jpg", title: "Learning", category: "education", description: "Learning moments and educational activities." },
-  { id: 21, src: "/gallery/hero-5-min.jpg", title: "Playtime", category: "activities", description: "Children enjoying playtime and recreation." },
-  { id: 22, src: "/gallery/kk0.jpg", title: "Friends", category: "children", description: "Friendship and bonding among our children." },
-  { id: 23, src: "/gallery/lklko.jpg", title: "Bilha", category: "children", description: "One of our children, Bilha, at Motherly Care." }
+  { id: 21, src: "/gallery/hero-5-min.jpg", title: "Playtime", category: "activities", description: "Children enjoying playtime and activities." }
 ];
 
 const categories = [
